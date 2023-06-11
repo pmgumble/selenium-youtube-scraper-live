@@ -1,3 +1,4 @@
+import smtplib
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By 
@@ -42,23 +43,33 @@ def parse_video(video):
     'views': views
   }
   
-  
+def send_email():
+  try:
+    # server = smtblib.SMTP('smtp.gmail.com',587)
+    # server.ehlo()
+    # server.starttls()
+    server_ssl = smtplib.SMTP_SSL('smtp.gmail.com',465)
+    server_ssl.ehlo()
+  except:
+    print('Something went wrong...')
+
 
 if __name__ == "__main__":
-  print('Creating Driver')
-  driver = get_driver()
+  # print('Creating Driver')
+  # driver = get_driver()
   
-  print('Featching trending videos')
-  videos = get_videos(driver)
+  # print('Featching trending videos')
+  # videos = get_videos(driver)
   
-  print(f'Found {len(videos)} videos')
+  # print(f'Found {len(videos)} videos')
 
-  print("parsing top 10 videos")
-  videos_data = [parse_video(video) for video in videos[:10]]
-  # title, url, thumbnail_url,  channel, views, uploaded, descriptions 
-
-  # print(videos_data)
-  print('Save the data to CSV')
-  videos_df = pd.DataFrame(videos_data)
-  print(videos_df)
-  videos_df.to_csv('trending.csv', index=None)
+  # print("parsing top 10 videos")
+  # videos_data = [parse_video(video) for video in videos[:10]]
+ 
+  # print('Save the data to CSV')
+  # videos_df = pd.DataFrame(videos_data)
+  # print(videos_df)
+  # videos_df.to_csv('trending.csv', index=None)
+  
+  print("Send an Email with the results")
+  send_email()
