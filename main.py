@@ -4,7 +4,7 @@ import json
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-import pandas as pd
+# import pandas as pd
 
 YOUTUBE_TRENDING_URL = "https://www.youtube.com/feed/trending"
 
@@ -95,9 +95,9 @@ if __name__ == "__main__":
   videos_data = [parse_video(video) for video in videos[:10]]
 
   print('Save the data to CSV')
-  videos_df = pd.DataFrame(videos_data)
+  # videos_df = pd.DataFrame(videos_data)
   # print(videos_df)
-  videos_df.to_csv('trending.csv', index=None)
+  # videos_df.to_csv('trending.csv', index=None)
 
   print("Send an results over Email")
   body = json.dumps(videos_data, indent=2)
