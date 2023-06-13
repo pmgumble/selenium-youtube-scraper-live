@@ -24,7 +24,7 @@ Scrape Top Trending videos on YouTube using Selenium and AWS Lambda
   
   - b. Attempt to scrape the page using requests and Beautiful Suoup
   
-**Step-3: Selenium**
+**Step-3: Extract Information using Selenium**
 
  - a. Install Selenium and create a browser driver
   
