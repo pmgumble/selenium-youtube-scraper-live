@@ -14,7 +14,7 @@ Scrape Top Trending videos on YouTube using Selenium and AWS Lambda
 4. AWS Lmabda
 5. SMTP for email 
 
-*Steps executed in dettail to achive the objective.*
+*Steps executed in detail to achive the objective.*
 
 *Step-1: Create a GitHub Repo* 
 
@@ -38,4 +38,7 @@ Scrape Top Trending videos on YouTube using Selenium and AWS Lambda
   b. Setup SSL, TLS and authenticate using password
   c. Send sample email with just text
   d. Send an email with text and attachment.
+  
+  
+Special Thanks to jovian.ai and Akash N S for guiding through this workshop.
 
