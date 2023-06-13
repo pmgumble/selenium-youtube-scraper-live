@@ -19,24 +19,36 @@ Scrape Top Trending videos on YouTube using Selenium and AWS Lambda
 *Step-1: Create a GitHub Repo* 
 
 *Step-2: Launch repo on Replit*
+
   a. Create & Excecute Python script 
+  
   b. Attempt to scrape the page using requests and Beautiful Suoup
   
 *Step-3: Selenium*
+
   a. Install Selenium and create a browser driver
+  
   b. Load the page and extract information.
+  
   c. Create CSV file of results using Pandas
   
 *Step-4 Setup rexurring Job on AWS Lambda*
+
   a. Create AWS Lambda Python function
+  
   b. Deploy the sample script and observe the output
+  
   c. Add layers for selenium and chromium
+  
   d. Setup recurring job using AWS cloudwatch
   
 *Step-5 Send result over email using SMTP*
   a. Create email client using SMTP lib
+  
   b. Setup SSL, TLS and authenticate using password
+  
   c. Send sample email with just text
+  
   d. Send an email with text and attachment.
   
   
